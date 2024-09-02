@@ -1,0 +1,4 @@
+git clone
+cd backend-g08
+code .
+open .

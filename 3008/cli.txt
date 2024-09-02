@@ -1,0 +1,89 @@
+chitkara> db.student.find({
+... marks: {$gt:40}
+... })
+[
+  {
+    _id: ObjectId('66cef696bae9c9b62446b79e'),
+    name: 'Emily',
+    age: 21,
+    marks: 48,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b79f'),
+    name: 'Michael',
+    age: 20,
+    marks: 42,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a0'),
+    name: 'Sarah',
+    age: 23,
+    marks: 56,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a1'),
+    name: 'David',
+    age: 24,
+    marks: 52,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a2'),
+    name: 'Ram',
+    age: 25,
+    marks: 58,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  }
+]
+
+chitkara> db.student.find( { $or: [ { marks: { $lt: 60 } }, { age: 23 } ] } )
+[
+  {
+    _id: ObjectId('66cef696bae9c9b62446b79e'),
+    name: 'Emily',
+    age: 21,
+    marks: 48,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b79f'),
+    name: 'Michael',
+    age: 20,
+    marks: 42,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a0'),
+    name: 'Sarah',
+    age: 23,
+    marks: 56,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a1'),
+    name: 'David',
+    age: 24,
+    marks: 52,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  },
+  {
+    _id: ObjectId('66cef696bae9c9b62446b7a2'),
+    name: 'Ram',
+    age: 25,
+    marks: 58,
+    subject: 'Data Science',
+    address: 'Chitkara University'
+  }
+]
